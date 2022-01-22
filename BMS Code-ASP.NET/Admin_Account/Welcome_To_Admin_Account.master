@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Welcome_To_Admin_Account.master.cs" Inherits="Welcome_To_Admin_Account" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #c0c0c0;
+        }
+        .style2
+        {
+            width: 279px;
+        }
+        .style3
+        {
+            width: 287px;
+        }
+        .style11
+        {
+            text-align: center;
+        }
+        </style>
+</head>
+<body background="../Images/bank4.jpg">
+    <form id="form1" runat="server">
+    <table class="style1">
+        <tr>
+            <td class="style2">
+                <asp:Image ID="Image1" runat="server" Height="290px" ImageUrl="~/Images/Logo1.jpg" />
+            </td>
+            <td style="font-family: 'Times New Roman'; font-size: xx-large; font-weight: 700; text-align: justify; color: #99FF33; background-image: url('Images/bank3.jpg');">
+                <marquee behavior="alternate" direction="left" scrollamount="10">HSK Bank - Admin Account</marquee>
+                <marquee behavior="alternate" direction="right" scrollamount="10">HSK Bank - Admin Account</marquee></td>
+        </tr>
+        <tr>
+            <td class="style2">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <table class="style1">
+        <tr>
+            <td colspan="2" style="background-color: #333300; text-align: right;">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx" 
+                    style="color: #FFFF00">Log Out</asp:HyperLink>
+            </td>
+        </tr>
+        <tr>
+            <td class="style3" rowspan="3">
+                <asp:Menu ID="Menu1" runat="server" BackColor="#E3EAEB" 
+                    DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                    ForeColor="#666666" Height="367px" StaticSubMenuIndent="10px" 
+                    style="font-weight: 700; font-size: x-large; font-style: italic" 
+                    Width="286px">
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Admin_Account/Admin_Home_Account.aspx" Text="Home" 
+                            Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="Create Pin" Value="Create Pin" 
+                            NavigateUrl="~/Admin_Account/Admin_Create_Pin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Customer Information" Value="Customer Information" 
+                            NavigateUrl="~/Admin_Account/Admin_Customer_Information.aspx">
+                        </asp:MenuItem>
+                         <asp:MenuItem Text="Customer A/C Info" Value="Customer A/C Info" 
+                            NavigateUrl="~/Admin_Account/Admin_Information.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Customer A/C Transaction" Value="Customer A/C Info" 
+                            NavigateUrl="~/Admin_Account/Admin_Customer_Tran.aspx"></asp:MenuItem>
+                        
+                        
+                    </Items>
+                </asp:Menu>
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+    <table class="style1">
+        <tr>
+            <td>
+            <p class="style11" 
+                style="background-color: #003300; color: #FFFFFF; font-weight: bold">©2018 HSK 
+                Bank. &nbsp;All rights reserved.
+</p>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

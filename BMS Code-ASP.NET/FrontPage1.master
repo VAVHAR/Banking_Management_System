@@ -1,0 +1,350 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontPage1.master.cs" Inherits="FrontPage1" %>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            border: 1px solid #c0c0c0;
+            background-image: url('Images/orang039.jpg');
+        }
+        .style3
+        {
+            width: 100%;
+            height: 151px;
+            border: 1px solid #c0c0c0;
+        }
+        .style4
+        {
+            width: 269px;
+        }
+        .style6
+        {
+            height: 23px;
+        }
+        .style7
+        {
+            width: 439px;
+        }
+        .title
+        {
+            width: 1262px;
+        }
+        .style9
+        {
+            width: 1262px;
+            text-align: center;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        #Go_Button
+        {
+            width: 63px;
+        }
+        .style11
+        {
+            text-align: center;
+        }
+        .style12
+        {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #c0c0c0;
+            font-weight: 700;
+            text-decoration: underline;
+            font-family: "Bookman Old Style";
+        }
+        .style14
+        {
+            height: 23px;
+            color: #FFFFFF;
+        }
+        .style15
+        {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #c0c0c0;
+            font-weight: 700;
+            font-family: "Bookman Old Style";
+        }
+        .style16
+        {
+            height: 23px;
+            color: #FFFFFF;
+            width: 186px;
+        }
+        .style17
+        {
+            height: 376px;
+        }
+        .style18
+        {
+            text-align: justify;
+            
+        }
+        .style19
+        {
+            width: 455px;
+        }
+        .style20
+        {
+            width: 465px;
+        }
+        .style21
+        {
+            height: 156px;
+        }
+        </style>
+    </head>
+<body background="Images/bank4.jpg">
+    <form id="form1" runat="server">
+    <table class="style1" 
+        style="background-image: url('/C:/Users/SONY/Desktop/Banking Data/ASP.NET/Images/windows-7-wallpaper-1920x1200.jpg')">
+        <tr>
+            <td class="style4">
+                <asp:Image ID="Image1" runat="server" Height="220px" 
+                    ImageUrl="~/Images/Logo1.jpg" Width="100%" />
+            </td>
+            <td>
+                <table class="style3">
+                    <tr>
+                        <td colspan="2">
+                            <table class="style15">
+                                <tr>
+                                    <td class="style14">
+                                        <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Yellow" 
+                                            NavigateUrl="~/Login.aspx" >Administrator</asp:HyperLink>
+                                    </td>
+                                    <td class="style16">
+                                        <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Yellow" 
+                                            NavigateUrl="~/Login.aspx">Customer</asp:HyperLink>
+                                    </td>
+                                    <td class="style14">
+                                        <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="Yellow" 
+                                            NavigateUrl="~/Login.aspx">Employee</asp:HyperLink>
+                                    </td>
+                                    
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" 
+                            style="text-align:center; background-color: #333300; color: #999966; font-weight: bold; font-size: x-large;">
+                            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" 
+                                ForeColor="#999966" Text="HSK BANKING"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style20">
+                            &nbsp;</td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table class="style12">
+                                <tr>
+                                    <td>
+                                        <table class="style12">
+                                            <tr>
+                                                <td bgcolor="#333300" class="style19">
+                                                    <asp:Label ID="Label8" runat="server" Text="Find Your Nearest" 
+                                                        BackColor="#333300" Font-Bold="True" ForeColor="#999966"></asp:Label>
+                                                </td>
+                                                <td bgcolor="#333300">
+                                                    <asp:Button ID="Button2" runat="server" onclick="Button2_Click" 
+                                                        style="color: #999966; font-weight: 700; font-size: medium; font-family: 'Bookman Old Style'; background-color: #333300" 
+                                                        Text="Locate Us" PostBackUrl="~/Contact_Us.aspx" />
+                                                </td>
+                                            </tr>
+                                            </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="style4" rowspan="2">
+                <asp:Menu ID="Menu1" runat="server" BackColor="#003300" ForeColor="#999966" 
+                    Font-Bold="true" Font-Size="Large" Height="278px" Width="277px">
+                    <Items>
+                    <asp:MenuItem Text="Home" Value="Home" 
+                            NavigateUrl="Welcome.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Personal Banking" Value="Personal Banking">
+                            <asp:MenuItem Text="Personal Checking" Value="Personal Checking" 
+                                NavigateUrl="~/Personal_Banking_Checkings.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Personal Saving" Value="Personal Saving" 
+                                NavigateUrl="~/Personal_Banking_Savings.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Business Banking" Value="Business Banking" 
+                            NavigateUrl="~/Business_Banking.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Current Rates" Value="Current Rates" 
+                            NavigateUrl="~/Rate_Of_Interest.aspx"></asp:MenuItem>
+                        
+                        <asp:MenuItem Text="About Us" Value="About Us" NavigateUrl="~/About_Us.aspx">
+                              <asp:MenuItem Text="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/Contact_Us.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Locations &amp; Hours" Value="Locations &amp; Hours" 
+                                NavigateUrl="~/Locations_and_Hours.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Offices &amp; Staffs" Value="Offices &amp; Staffs" 
+                                NavigateUrl="~/Officers_and_Staffs.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Helpful Links" Value="Helpful Links" 
+                            NavigateUrl="~/Helpful_Links.aspx"></asp:MenuItem>
+                        
+                        
+                    </Items>
+                </asp:Menu>
+            </td>
+            </tr>
+            
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+               <tr>
+                   <td>
+                       <table class="style3">
+                           
+                           <tr>
+                                <td class="style21" align="center" 
+                
+                                    style="font-family: 'Arial Black'; font-size: large; font-weight: bold; color: #996633; background-color: #000000">
+                <marquee behavior="scroll" direction="left" 
+                            style="width: 964px; height: 27px; margin-left: 1px;">
+					*****Bank-Owned Properties For Sale*****Residential Lots*****Commercial Offices*****Special Bank Financing Available*****Visit Our Properties For Sale Page For More Information</marquee> </i></b></font></td>
+					&nbsp;</td>
+                           </tr>
+                           </table>
+                   </td>
+               </tr>
+        </asp:ContentPlaceHolder>
+           
+    </table>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        <table class="style3">
+            <tr>
+                <td class="style7" 
+                
+                    
+                    style="background-color: #333300; color: #999966; font-size: large; font-weight: bold">
+                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="X-Large" 
+                    Text="Featured Products" style="text-align: center"></asp:Label>
+                </td>
+                <td class="style2" 
+                    
+                    style="background-color:#333300; color:#999966; font-size:x-large; font-weight:bold">
+                    <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="X-Large" 
+                    Text="Market Watch" ForeColor="#999966" style="text-align: center"></asp:Label>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="style7" align="left">
+                    <p>
+                        <strong style="font-size: 90%">BANK OWNED PROPERTIES FOR SALE</strong></p>
+                    <p>
+                        From beautiful residential lots located in The Waghodia &amp; The Park at Kamati 
+                        baug to luxurious & spacious commercial offices located off Due West Road in 
+                        Sayaji Gunj. HSK Bank has a property to suit your needs. <em>Ask About Special Bank Financing.</em><br>
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                    &nbsp;</td>
+                <td class="style2">
+                    <table class="style3" style="font-weight: bold">
+                        <tr style="font-family: 'Arial Black'; font-size: large; color: #999966; background-color: #333300">
+                            <td>
+                                <asp:Label ID="Label5" runat="server" BackColor="#333300" Font-Bold="True" 
+                                Font-Size="Large" ForeColor="#999966" Text="Index"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label6" runat="server" Text="Last"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label7" runat="server" Text="Change"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                DJIA</td>
+                            <td>
+                                12,505.99</td>
+                            <td>
+                                +52.45</td>
+                        </tr>
+                        <tr style="background-color: #009900">
+                            <td>
+                                Nashaq</td>
+                            <td>
+                                2,280.16</td>
+                            <td>
+                                +17.65</td>
+                        </tr>
+                        <tr>
+                            <td class="style6">
+                                S &amp; P 500</td>
+                            <td class="style6">
+                                1,337.38</td>
+                            <td class="style6">
+                                0.00</td>
+                        </tr>
+                        <tr style="background-color: #009900">
+                            <td>
+                                AMEX</td>
+                            <td>
+                                2,453.738</td>
+                            <td>
+                                +14.25</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <form id="ticker" method="get">
+                                &nbsp;<input type="hidden" name="bgcolor" /><input type="hidden" name="title" /><input type="hidden" name="rowcolor" /><input type="hidden" name="rowcolor2" /><input type="hidden" name="width" /><input type="hidden" name="custom" /></form>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td valign="top" align="left" style="text-align: center" class="style17">
+                    <p class="style9" 
+                
+                style="font-size:x-large; background-color: #333300; color: #999966; font-weight: bold; width: 100%;">
+                        Welcome to HSK Bank</p>
+                    <p class="style18">
+                        With our World Headquarters right here in India , we are ready to meet all your financial needs. We have First three branches in 
+                        Vadodara, Surat, and Ahemdabad.</p>
+                    <p class="style18">
+                        <b>Press Release - October 21, 2016:</b> HSK Bank enters into formal agreement with regulators.
+                        <a target="blank" href="PDF%20Files/PressRelease10-21-10.pdf">Click Here</a> for details.</p>
+                    <p class="style18">
+                        <b style="text-align: justify">FDIC Insurance Update:</b> The FDIC has announced a permanent increase in insurance limits up to 
+                        Rs.2,50,000.00 per depositor. In addition, Non Interest earning deposit accounts have been granted a temporary insurance increase.
+                        <a target="_blank" href="PDF%20Files/FDIC-Insurance-Statement.pdf">Click here</a> for more details.</p>
+                    <p class="style18">
+                        <b>We provide greater online banking security!</b> Your password is on a separate second screen with an image and a phrase, plus three potential "challenge questions".
+                        <b>The image and phrase tell you that you are on the bank's online system (not a false one)</b>, and the three challenge questions help identify you if you use a different computer. Feel free to call us with any questions! We will do everything we can to provide good old-fashioned banking with people in mind. Community is our middle name, so plan to do your banking with Westside today!</p>
+                    <p class="style18">
+                        <b>Please note: We will never send you an email</b> or an automated phone message asking for any of your personal information. Such requests are trying to obtain your private information. We only contact you personally - that's the way we do business. Thank you!</p>
+                    <p class="style18">
+                        <b>For our Online Banking Customers:</b> Please be aware that our business day ends at
+                        <b>5:00 PM</b>. Transfers made online after that time may not be processed until the next business day.</p>
+                    <p class="style11" 
+                style="background-color: #003300; color: #FFFFFF; font-weight: bold">
+                        ©2018 HSK Bank. &nbsp;All rights reserved.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
